@@ -1,10 +1,10 @@
-FROM ubuntu:latest
+FROM python:3.10
 LABEL authors="Zavadski"
-COPY . /home/TestZavadski
 WORKDIR /home/TestZavadski
 RUN apt-get update && apt-get install -y python3 python3-pip python3-dev build-essential
-RUN git clone https://github.com/Caxaro4ekPixel/TestSOFTNET.git
-RUN pip3 install -r requirements.txt
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
 RUN flask db init
 RUN flask db migrate
 RUN flask db upgrade
