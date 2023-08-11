@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "b5a5be08-05be-430f-a890-c1815376e778",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17231453"
+	},
+	"item": [
+		{
+			"name": "reg user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTE1OTg5NTcsImV4cCI6MTY5MTY4NTM1NywianRpIjoiYzZlMzRmYzUtNDdhMS00YjU4LTg5OGQtMGQ2YWE1ZmE1YzE3IiwiaWQiOjUsInJscyI6InVzZXIiLCJyZl9leHAiOjE2OTE3NzE3NTd9.RMPmfWkQHap7lrv_-7ku6amqQkD2WI1p8IcH9EIlAxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test\",\r\n    \"password\": \"testtest\",\r\n    \"r_password\": \"testtest\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/API/v1/reg-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"API",
+						"v1",
+						"reg-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unreg user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTE1OTY2MjAsImV4cCI6MTY5MTY4MzAyMCwianRpIjoiNzFjOGFiZjctMGVjOC00MDM3LTljZjAtMjY5ODIyOGJkMWI4IiwiaWQiOjEsInJscyI6ImFkbWluIiwicmZfZXhwIjoxNjkxNzY5NDIwfQ.bQceyBZCdVKFrIWs8rhu5Vb-Vx8wLepo0nm7zEx9Jpw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/API/v1/unreg-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"API",
+						"v1",
+						"unreg-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"adminadmin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/API/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"API",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get notes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTE2Njc0NDgsImV4cCI6MTY5MTc1Mzg0OCwianRpIjoiN2Y5NTgzNWItMTVmNy00ZmM4LTk4MWEtZDAwNThlMDA5NTc1IiwiaWQiOjUsInJscyI6ImFkbWluIiwicmZfZXhwIjoxNjkxODQwMjQ4fQ.Slz_U_mXLZmyaBjLWBGjP8nVgzcv8VTVGNi87uG5i08",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dashboard_title\": \"all\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/API/v1/get-notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"API",
+						"v1",
+						"get-notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create notes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTE2Njc0NDgsImV4cCI6MTY5MTc1Mzg0OCwianRpIjoiN2Y5NTgzNWItMTVmNy00ZmM4LTk4MWEtZDAwNThlMDA5NTc1IiwiaWQiOjUsInJscyI6ImFkbWluIiwicmZfZXhwIjoxNjkxODQwMjQ4fQ.Slz_U_mXLZmyaBjLWBGjP8nVgzcv8VTVGNi87uG5i08",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dashboard_title\": \"test_dashboard_2\",\r\n    \"notes\": [\r\n        \"test_note_1\",\r\n        \"test_note_2\",\r\n        \"test_note_3\",\r\n        \"test_note_4\",\r\n        \"test_note_5\",\r\n        \"test_note_6\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/API/v1//create-notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"API",
+						"v1",
+						"",
+						"create-notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit notes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTE2Njc0NDgsImV4cCI6MTY5MTc1Mzg0OCwianRpIjoiN2Y5NTgzNWItMTVmNy00ZmM4LTk4MWEtZDAwNThlMDA5NTc1IiwiaWQiOjUsInJscyI6ImFkbWluIiwicmZfZXhwIjoxNjkxODQwMjQ4fQ.Slz_U_mXLZmyaBjLWBGjP8nVgzcv8VTVGNi87uG5i08",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"note_id\": 1,\r\n    \"note_new_text\": \"test_note_1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/API/v1/edit-notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"API",
+						"v1",
+						"edit-notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete note",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTE2Njc0NDgsImV4cCI6MTY5MTc1Mzg0OCwianRpIjoiN2Y5NTgzNWItMTVmNy00ZmM4LTk4MWEtZDAwNThlMDA5NTc1IiwiaWQiOjUsInJscyI6ImFkbWluIiwicmZfZXhwIjoxNjkxODQwMjQ4fQ.Slz_U_mXLZmyaBjLWBGjP8nVgzcv8VTVGNi87uG5i08",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"note_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/API/v1/delete-notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"API",
+						"v1",
+						"delete-notes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
